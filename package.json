@@ -8,10 +8,23 @@
     "build": "node build/build.js",
     "dev": "node build/dev-server.js",
     "dev-client": "node client/build/dev-server.js",
-    "start": "node build/dev-server.js"
+    "start": "node build/dev-server.js",
+    "dev-server": "cross-env NODE_ENV=development DEBUG=kov-blog supervisor --harmony server/index.js"
   },
   "dependencies": {
+    "cross-env": "^5.0.0",
+    "debug": "^2.6.6",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-cors": "0.0.16",
+    "koa-favicon": "^2.0.0",
+    "koa-onerror": "^3.1.0",
+    "koa-router": "^7.1.1",
+    "koa-static": "^3.0.0",
     "lodash": "^4.17.4",
+    "mini-logger": "^1.1.2",
+    "supervisor": "^0.12.0",
+    "validator": "^7.0.0",
     "vue": "^2.2.6",
     "vue-router": "^2.3.1",
     "vuex": "^2.3.1"

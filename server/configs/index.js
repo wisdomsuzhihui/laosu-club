@@ -2,14 +2,23 @@
  * Created by laosu on 13/5/17
  */
 
-"use strict"
-const path = require('path'),
-  serverRoot = path.dirname(__dirname),
+// "use strict"
+// const path = require('path'),
+//   serverRoot = path.dirname(__dirname),
+//   root = path.resolve(serverRoot, '../'),
+//   staticDir = path.join(root, 'static'),
+//   dev = require('./dev.js'),
+//   fs = require('fs'),
+//   _ = require('lodash');
+
+import path from 'path'
+import dev from './dev'
+import fs from 'fs'
+import _ from 'loadsh'
+
+const serverRoot = path.dirname(__dirname),
   root = path.resolve(serverRoot, '../'),
-  staticDir = path.join(root, 'static'),
-  dev = require('./dev.js'),
-  fs = require('fs'),
-  _ = require('lodash');
+  staticDir = path.join(root, 'static');
 
 // 默认生产环境
 
@@ -52,5 +61,5 @@ if (process.env.NODE_ENV === 'production') {
     config = _.merge(config, require('./private.js'))
   }
 }
-
-module.exports = config
+config.log(config)
+export default config
