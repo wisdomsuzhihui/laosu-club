@@ -22,8 +22,8 @@
 //   jwt = require('jsonwebtoken'),
 //   controllers = require('./controllers/index.js');
 
-import config from './configs'
-import path from 'path'
+import config from './configs/index';
+import path from 'path';
 import co from 'co'
 import assert from 'assert'
 import koa from 'koa'
