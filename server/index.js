@@ -38,6 +38,7 @@ import utils from './utils/index'
 /**
  * 如果你的node版本高于4.0 ,可以使用node自带promise
  * mongoose.Promise = global.Promise;
+ * 测试git服务
  */
 mongoose.Promise = Promise
 
